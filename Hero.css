@@ -1,0 +1,194 @@
+.hero {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #000000;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  color: #ff003c;
+  text-shadow: 0 0 10px #ff003c, 0 0 20px #ff003c;
+  transform: perspective(600px) rotateX(8deg);
+  animation: float 3s ease-in-out infinite;
+}
+
+.hero-title span {
+  color: #ffffff;
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #ff003c;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: #ccc;
+  margin-top: 20px;
+  animation: fadeIn 2s ease forwards;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) perspective(600px) rotateX(8deg); }
+  50% { transform: translateY(-10px) perspective(600px) rotateX(8deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.red-name {
+  color: #ffffff;
+  text-shadow: 0 0 10px #ff003c, 0 0 25px #ff003c;
+}
+.glow-subtitle {
+  color: #ffccd5;
+  font-size: 1.5rem;
+  margin-top: 20px;
+  text-shadow: 0 0 10px #ff003c, 0 0 20px #ff003c, 0 0 30px #8b0000;
+  animation: glow-fade 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow-fade {
+  from {
+    text-shadow: 0 0 5px #ff003c, 0 0 10px #ff003c, 0 0 15px #8b0000;
+  }
+  to {
+    text-shadow: 0 0 15px #ff003c, 0 0 25px #ff003c, 0 0 35px #8b0000;
+  }
+}
+.profile-pic {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #ff003c;
+  box-shadow: 0 0 15px #ff003c, 0 0 30px #ff003c88;
+  margin-bottom: 25px;
+  transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+}
+.hero {
+  position: relative;
+  height: 100vh;
+  text-align: center;
+  padding-top: 100px;
+  color: #222;
+  z-index: 1;
+}
+
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 3px solid #ffb6c1;
+  object-fit: cover;
+  margin-bottom: 20px;
+  box-shadow: 0 0 15px #ff69b4;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.glow-name {
+  color: #ff69b4;
+  text-shadow: 0 0 8px #ff69b4, 0 0 16px #ff69b4, 0 0 24px #ff1493;
+}
+
+.hero-subtitle {
+  font-size: 1.4rem;
+  margin-top: 10px;
+  color: #555;
+}
+
+.glow-subtitle {
+  text-shadow: 0 0 4px #ffc0cb, 0 0 10px #ffb6c1;
+}
+/* General Reset */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(145deg, #000000, #1a1a2e);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: white;
+}
+
+/* Glowing Name */
+.glow-name {
+  color: #ff4f8b;
+  text-shadow: 0 0 10px #ff4f8b, 0 0 20px #ff4f8b, 0 0 30px #ff4f8b;
+}
+
+/* Subtitle Glow */
+.glow-subtitle {
+  font-size: 1.3rem;
+  color: #ffffff;
+  margin-top: 10px;
+  text-shadow: 0 0 6px #00f0ff, 0 0 10px #00f0ff;
+}
+
+/* Profile Pic */
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 3px solid #ff4f8b;
+  box-shadow: 0 0 15px #ff4f8b;
+  margin-bottom: 20px;
+}
+
+/* Sparkle Container */
+.magical-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Sparkles */
+.sparkle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff;
+  animation: sparkleMove linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes sparkleMove {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(0.5);
+    opacity: 0;
+  }
+}
+
+/* Optional text styling */
+.hero-title {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+/* Magical Sparkle Background */
